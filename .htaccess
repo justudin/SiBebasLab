@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(cli\.php|index\.php|xajax_js|images|media|files|robots\.txt)
+
+RewriteRule ^(.*)$ /w3/lab/index.php/$1 [L]
+</IfModule>
+
